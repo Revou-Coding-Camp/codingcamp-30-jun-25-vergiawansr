@@ -1,4 +1,4 @@
-//PopUp Nama Gerak//
+//PopUp Nama//
 document.addEventListener("DOMContentLoaded", () => {
   const userName = prompt("Siapa nama kamu?");
   const welcomeEl = document.getElementById("welcomeText");
@@ -7,11 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
     ? `Hi, ${userName}! Welcome To My Website`
     : "Hi! Welcome To My Website";
 
-  typeSentence(message, welcomeEl, 100);
+  typeSentence(message, welcomeEl, 100); 
 });
 
+/**
+ * F
+ * @param {string} sentence
+ * @param {HTMLElement} targetEle  
+ * @param {number} speed 
+ */
 function typeSentence(sentence, targetEle, speed) {
-  targetEle.textContent = "";
+  targetEle.textContent = "";        // kosongkan dulu
   let i = 0;
 
   function type() {
